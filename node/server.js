@@ -72,4 +72,11 @@ app.post('/api/upload', upload.single('file'), function(request, response) {
 /** STATIC **/
 app.use('/img', express.static('img'));
 app.use('/asset', express.static('asset'));
-app.use('/', express.static('dist'));
+//app.use('/', express.static('dist'))
+
+app.use(express.static('dist'))
+
+// Catch all other routes and return the index file
+app.get('*', function(request, response) {
+    response.sendFile(Path.join(__dirname, 'dist/index.html'));
+});

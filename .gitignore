@@ -35,3 +35,7 @@ testem.log
 Thumbs.db
 /img/
 /proxy.conf.json
+/www/dist/
+/node/node_modules/
+/configdb/
+/db/
