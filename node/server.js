@@ -2,7 +2,7 @@
 
 const IP = '0.0.0.0';
 const PORT = 3000;
-const MONGO = 'mongodb://localhost:27017/snooker';
+const MONGO = 'mongodb://0.0.0.0:27017/snooker';
 const PHOTOS = 'img';
 
 var express = require('express');
@@ -73,10 +73,3 @@ app.post('/api/upload', upload.single('file'), function(request, response) {
 app.use('/img', express.static('img'));
 app.use('/asset', express.static('asset'));
 //app.use('/', express.static('dist'))
-
-app.use(express.static('dist'))
-
-// Catch all other routes and return the index file
-app.get('*', function(request, response) {
-    response.sendFile(Path.join(__dirname, 'dist/index.html'));
-});
