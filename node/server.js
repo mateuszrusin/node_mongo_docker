@@ -2,7 +2,7 @@
 
 const IP = '0.0.0.0';
 const PORT = 3000;
-const MONGO = 'mongodb://0.0.0.0:27017/snooker';
+const MONGO = 'mongodb://mongo:27017/snooker';
 const PHOTOS = 'img';
 
 var express = require('express');
